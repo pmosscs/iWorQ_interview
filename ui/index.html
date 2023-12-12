@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Form</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="main.js"></script>
+</head>
+<body>
+    <div class="page">
+        <header>
+            <h1>Property Re-Zoning - Duck Breeding and Herding</h1>
+            <p class="subtitle">Complete and submit this form to re-zone your property into a duck breeding and herding establishment</p>
+        </header>
+        <hr>
+        <form>
+            <section class="personal-info">
+                <label for="name">Name of person requesting permit: <input class="input-fields long-field" id="name" type="text"></label>
+                <div class="small-fields">
+                    <label for="email">Email: <input class="input-fields" id="email" type="text"></label>
+                    <label for="phone">Phone number: <input class="input-fields" id="phone" type="text"></label>
+                </div>
+                <label for="address">Address: <input class="input-fields address-field" id="address" type="text"></label>
+            </section>
+            <hr>
+            <section class="property-info">
+                <fieldset>
+                    <legend>Property Type:</legend>
+                    <div>
+                        <input id="residential" type="radio" name="property" value="Residential"><label for="residential">Residential</label>
+                    </div>
+                    <div>
+                        <input id="commercial" type="radio" name="property" value="Commercial"><label for="commercial">Commercial</label>
+                    </div>
+                    <div>
+                        <input id="land" type="radio" name="property" value="Land"><label for="land">Land</label>
+                    </div>
+                </fieldset>
+                <p>Same address as above?</p>
+                <label for="yes">Yes <input id="yes" type="radio" name="same-address" value="true"></label>
+                <label for="no">No <input id="no" type="radio" name="same-address" value="false"></label>
+                <div class="other-address">
+                    <label for="property-address">Address: <input class="input-fields address-field" id="prop-address" type="text"></label>
+                </div>
+                <div class="text-area">
+                    <label for="notes">Notes:</label>
+                    <textarea name="notes" id="notes" cols="30" rows="10"></textarea>
+                </div>
+            </section>
+            <input class="submit-form" type="submit" value="Submit This Form">
+        </form>
+        <div class="thank-you"> <!-- if real query: show this on successful call, show failure message on failed request -- I would make 2 h4s (success and failure) and hide both. Upon successful http request, I would use jquery to show the proper message-->
+            <h4>Thank you for submitting the form. We will be contacting you soon about your application to begin duck breeding and herding on your property.</h4>
+        </div>
+    </div>
+</body>
+</html>
