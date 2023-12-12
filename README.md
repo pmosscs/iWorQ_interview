@@ -1,7 +1,7 @@
 # iWorQ Interview Project
 
 ## Overview
-This project is an online form submission.
+This project is an online form submission using JQuery and PHP to make a fake MS SQL query.
 
 ## Features
 - **Form Fields**: Collects personal information, property details, and additional notes.
